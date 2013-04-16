@@ -80,7 +80,7 @@
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        0 ms
+                        1 ms
                     </td>
                 </tr>
                                 <tr>
@@ -91,7 +91,7 @@
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        5 ms
+                        3 ms
                     </td>
                 </tr>
                                 <tr>
@@ -102,28 +102,149 @@
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
+                        4 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>tryConnectAsUser</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
                         3 ms
                     </td>
                 </tr>
                                 <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>createPost</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        4 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>postComments</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        20 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>useTheCommentsRelation</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        17 ms
+                    </td>
+                </tr>
+                                <tr>
                     <td width="20%" class="failed" valign="top">
-                        <span>tryConnectAsUser</span>
+                        <span>fullTest</span>
                     </td>
                     <td class="error" valign="top">
-                                                <strong>Failure, </strong>
+                                                <strong>A play.exceptions.YAMLException has been caught, while scanning for the next token; found character 	'\t' that cannot start any token (in file /test/data.yml line 25, column 1)</strong>
                                                 <div class="source">
-                            <span>In /test/BasicTest.java, line 42 :</span>
+                            <span>In /test/BasicTest.java, line 142 :</span>
                         </div>
                         <div class="sourceLine">
                             <span>
                                 
-                                    	    assertNotNull(User.connect(&quot;tom@gmail.com&quot;, &quot;secret&quot;));
+                                    	    Fixtures.loadModels(&quot;data.yml&quot;);
                                 
                             </span>
                         </div>
-                                                                                                                    </td>
+                                                                        <a href="#" onclick="toggle_trace(this); return false;">Show trace</a>
+                        <pre data-role="trace">play.exceptions.YAMLException: while scanning for the next token; found character 	'\t' that cannot start any token (in file /test/data.yml line 25, column 1)
+	at play.test.Fixtures.loadModels(Fixtures.java:234)
+	at BasicTest.fullTest(BasicTest.java:142)
+	at sun.reflect.GeneratedMethodAccessor52.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at play.test.PlayJUnitRunner$StartPlay$2$1.evaluate(PlayJUnitRunner.java:105)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at play.test.PlayJUnitRunner.run(PlayJUnitRunner.java:55)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:24)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at play.test.TestEngine.run(TestEngine.java:112)
+	at controllers.TestRunner.run(TestRunner.java:66)
+	at sun.reflect.GeneratedMethodAccessor41.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:257)
+	at play.Invoker$Invocation.run(Invoker.java:278)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:235)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: while scanning for the next token
+found character 	'\t' that cannot start any token
+ in "<reader>", line 25, column 1:
+    	password:       secret
+    ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:360)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:183)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:564)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:163)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:228)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:160)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:230)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:160)
+	at org.yaml.snakeyaml.composer.Composer.composeDocument(Composer.java:122)
+	at org.yaml.snakeyaml.composer.Composer.getSingleNode(Composer.java:105)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:124)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:264)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:238)
+	at play.test.Fixtures.loadModels(Fixtures.java:171)
+	... 51 more
+</pre>
+                                                                                            </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        4 ms
+                        56 ms
                     </td>
                 </tr>
                             </table>
